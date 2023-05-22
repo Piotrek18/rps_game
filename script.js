@@ -24,23 +24,23 @@ function playRound(){
     console.log("Wprowadzony łańcuch:", playerChoice);
     getComputerChoice()
     if(playerChoice === "paper" && compChoice === "paper"){//1. paper vs paper
-        console.log("draw!");
+        console.log("computer chose paper, draw!");
     }else if(playerChoice === "paper" && compChoice === "rock"){//2. paper vs rock
-        console.log("player wins!");
+        console.log("computer chose rock, you won!");
     }else if(playerChoice === "paper" && compChoice === "scissor"){//3. paper vs scissor
-        console.log("computer wins!");
+        console.log("computer chose scissor, you lost!");
     }    if(playerChoice === "rock" && compChoice === "paper"){//4. rock vs paper
-        console.log("computer wins!");
+        console.log("computer chose paper, you lost!");
     }else if(playerChoice === "rock" && compChoice === "rock"){//5. rock vs rock
-        console.log("draw!");
+        console.log("computer chose rock, draw!");
     }else if(playerChoice === "rock" && compChoice === "scissor"){//6. rock vs scissor
-        console.log("player wins!");
+        console.log("computer chose scissor, you won!");
     }    if(playerChoice === "scissor" && compChoice === "paper"){//7. scissor vs paper
-        console.log("player wins!");
+        console.log("computer chose paper, you won!");
     }else if(playerChoice === "scissor" && compChoice === "rock"){//8. scissor vs rock
-        console.log("computer wins!");
+        console.log("computer chose rock, you lost!");
     }else if(playerChoice === "scissor" && compChoice === "scissor"){//9. scissor vs scissor
-        console.log("draw!");
+        console.log("computer chose scissor, draw!");
     }
 }
 
