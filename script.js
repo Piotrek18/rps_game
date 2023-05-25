@@ -59,67 +59,37 @@ function playRound(){
     return winner;
 }
 
+function pointsCounter(){
+    if(winner === "player"){
+        playerPoints += 1;
+    }else if(winner === "computer"){
+        compPoints += 1;
+    }else {
+        playerPoints +=1;
+        compPoints +=1;
+    }
+}
+
 function game(){
     playRound()//round 1
-    if(winner === "player"){
-        playerPoints += 1;
-    }else if(winner === "computer"){
-        compPoints += 1;
-    }else {
-        playerPoints +=1;
-        compPoints +=1;
-    }
+    pointsCounter()
     playRound()//round 2
-    if(winner === "player"){
-        playerPoints += 1;
-    }else if(winner === "computer"){
-        compPoints += 1;
-    }else {
-        playerPoints +=1;
-        compPoints +=1;
-    }
+    pointsCounter()
     playRound()//round 3
-    if(winner === "player"){
-        playerPoints += 1;
-    }else if(winner === "computer"){
-        compPoints += 1;
-    }else {
-        playerPoints +=1;
-        compPoints +=1;
-    }
+    pointsCounter()
     playRound()//round 4
-    if(winner === "player"){
-        playerPoints += 1;
-    }else if(winner === "computer"){
-        compPoints += 1;
-    }else {
-        playerPoints +=1;
-        compPoints +=1;
-    }
+    pointsCounter()
     playRound()//round 5
-    if(winner === "player"){
-        playerPoints += 1;
-    }else if(winner === "computer"){
-        compPoints += 1;
-    }else {
-        playerPoints +=1;
-        compPoints +=1;
-    }
+    pointsCounter()
     //checking who won game
         if(playerPoints > compPoints){
         console.log("player won with score " +playerPoints + ":" +compPoints  );
     }else if(compPoints > playerPoints){
         console.log("computer won with score " +compPoints + ":" +playerPoints );
     }else {
-        console.log("draw! score was" +playerPoints + ":" +compPoints);
+        console.log("draw! score was " +playerPoints + ":" +compPoints);
     }
     
 }
-//getComputerChoice();
-//console.log(compChoice);
-//playRound();
-//console.log(winner);
 
 game();
-//console.log(playerPoints);
-//console.log(compPoints);
