@@ -6,7 +6,7 @@
 function getComputerChoice(){
     //function that randomize computer choice
     var randomNumber = Math.floor(Math.random()*3)+1; //random number from 1 to 3
-    console.log(randomNumber);
+    //console.log(randomNumber); 
     if(randomNumber === 1){
         compChoice = "rock";
     }
@@ -18,14 +18,14 @@ function getComputerChoice(){
     }else{
         console.log("error"); 
     }
-    console.log(compChoice);
+    //console.log(compChoice);
     return compChoice;
 }
 
 function playRound(){
     var userInput = prompt("Choose your weapon (rock, paper or scissor): ");
     var playerChoice = userInput.toLowerCase();
-    console.log("Wprowadzony łańcuch:", playerChoice);
+    //console.log("Wprowadzony łańcuch:", playerChoice);
     getComputerChoice()
     if(playerChoice === "paper" && compChoice === "paper"){//1. paper vs paper
         winner = "both";
@@ -107,11 +107,11 @@ function game(){
     }
     //checking who won game
         if(playerPoints > compPoints){
-        console.log("player won");
+        console.log("player won with score " +playerPoints + ":" +compPoints  );
     }else if(compPoints > playerPoints){
-        console.log("computer won");
+        console.log("computer won with score " +compPoints + ":" +playerPoints );
     }else {
-        console.log("draw!");
+        console.log("draw! score was" +playerPoints + ":" +compPoints);
     }
     
 }
@@ -121,5 +121,5 @@ function game(){
 //console.log(winner);
 
 game();
-console.log(playerPoints);
-console.log(compPoints);
+//console.log(playerPoints);
+//console.log(compPoints);
