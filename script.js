@@ -22,9 +22,10 @@ function getComputerChoice(){
     return compChoice;
 }
 
-function playRound(){
-    var userInput = prompt("Choose your weapon (rock, paper or scissor): ");
-    var playerChoice = userInput.toLowerCase();
+
+function playRound(playerChoice){
+    //var userInput = prompt("Choose your weapon (rock, paper or scissor): ");
+    //var playerChoice = userInput.toLowerCase();
     //console.log("Wprowadzony łańcuch:", playerChoice);
     getComputerChoice()
     if(playerChoice === "paper" && compChoice === "paper"){//1. paper vs paper
@@ -36,7 +37,8 @@ function playRound(){
     }else if(playerChoice === "paper" && compChoice === "scissor"){//3. paper vs scissor
         winner = "computer";
         console.log("computer chose scissor, you lost!");
-    }    if(playerChoice === "rock" && compChoice === "paper"){//4. rock vs paper
+    }    
+    if(playerChoice === "rock" && compChoice === "paper"){//4. rock vs paper
         winner = "computer";
         console.log("computer chose paper, you lost!");
     }else if(playerChoice === "rock" && compChoice === "rock"){//5. rock vs rock
@@ -45,7 +47,8 @@ function playRound(){
     }else if(playerChoice === "rock" && compChoice === "scissor"){//6. rock vs scissor
         winner = "player";
         console.log("computer chose scissor, you won!");
-    }    if(playerChoice === "scissor" && compChoice === "paper"){//7. scissor vs paper
+    }   
+     if(playerChoice === "scissor" && compChoice === "paper"){//7. scissor vs paper
         winner = "player";
         console.log("computer chose paper, you won!");
     }else if(playerChoice === "scissor" && compChoice === "rock"){//8. scissor vs rock
@@ -70,7 +73,24 @@ function pointsCounter(){
     }
 }
 
-function game(){
+var paperBtn = document.getElementById("paperBtn");
+var rockBtn = document.getElementById("rockBtn");
+var scissorBtn = document.getElementById("scissorBtn");
+
+paperBtn.addEventListener("click", function() {
+    playRound("paper")
+});
+
+rockBtn.addEventListener("click", function() {
+    playRound("rock")
+});
+
+scissorBtn.addEventListener("click", function() {
+    playRound("scissor")
+});
+
+
+/*function game(){
     playRound()//round 1
     pointsCounter()
     playRound()//round 2
@@ -91,5 +111,5 @@ function game(){
     }
     
 }
-
-game();
+*/
+//game();
