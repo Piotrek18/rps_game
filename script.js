@@ -27,36 +27,46 @@ function playRound(playerChoice){
     //var userInput = prompt("Choose your weapon (rock, paper or scissor): ");
     //var playerChoice = userInput.toLowerCase();
     //console.log("Wprowadzony łańcuch:", playerChoice);
+    var resultDiv = document.getElementById("resultDiv");
     getComputerChoice()
     if(playerChoice === "paper" && compChoice === "paper"){//1. paper vs paper
         winner = "both";
-        console.log("computer chose paper, draw!");
+        resultDiv.textContent = "computer chose paper, draw!";
+        //console.log("computer chose paper, draw!");
     }else if(playerChoice === "paper" && compChoice === "rock"){//2. paper vs rock
         winner = "player";
-        console.log("computer chose rock, you won!");
+        resultDiv.textContent = "computer chose rock, you won!";
+        //console.log("computer chose rock, you won!");
     }else if(playerChoice === "paper" && compChoice === "scissor"){//3. paper vs scissor
         winner = "computer";
-        console.log("computer chose scissor, you lost!");
+        resultDiv.textContent = "computer chose scissor, you lost!";
+        //console.log("computer chose scissor, you lost!");
     }    
     if(playerChoice === "rock" && compChoice === "paper"){//4. rock vs paper
         winner = "computer";
-        console.log("computer chose paper, you lost!");
+        resultDiv.textContent = "computer chose paper, you lost!";
+        //console.log("computer chose paper, you lost!");
     }else if(playerChoice === "rock" && compChoice === "rock"){//5. rock vs rock
         winner = "both";
-        console.log("computer chose rock, draw!");
+        resultDiv.textContent = "computer chose rock, draw!";
+        //console.log("computer chose rock, draw!");
     }else if(playerChoice === "rock" && compChoice === "scissor"){//6. rock vs scissor
         winner = "player";
-        console.log("computer chose scissor, you won!");
+        resultDiv.textContent = "computer chose scissor, you won!";
+        //console.log("computer chose scissor, you won!");
     }   
      if(playerChoice === "scissor" && compChoice === "paper"){//7. scissor vs paper
         winner = "player";
-        console.log("computer chose paper, you won!");
+        resultDiv.textContent = "computer chose paper, you won!";
+        //console.log("computer chose paper, you won!");
     }else if(playerChoice === "scissor" && compChoice === "rock"){//8. scissor vs rock
         winner = "computer";
-        console.log("computer chose rock, you lost!");
+        resultDiv.textContent = "computer chose rock, you lost!";
+        //console.log("computer chose rock, you lost!");
     }else if(playerChoice === "scissor" && compChoice === "scissor"){//9. scissor vs scissor
         winner = "both";
-        console.log("computer chose scissor, draw!");
+        resultDiv.textContent = "computer chose scissor, draw!";
+        //console.log("computer chose scissor, draw!");
     }
 
     return winner;
